@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Introduction</title>
+    
+    <style>
+    /* General styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(118, 154, 129);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+    a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #24715c;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    a:hover {
+        background-color: #03805e;
+    }
+    .link_footer,
+    .link_footer:hover {
+        display: inline-block;
+        color: green;
+        text-decoration: none;
+        background-color: transparent;
+        padding: 0.3rem;
+    }
+    .container {
+        text-align: center;
+        background: rgb(208, 237, 204);
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 4px 6px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.1);
+        max-width: 800px; /* Limit container width for larger screens */
+        width: 90%; /* Responsive width */
+    }
+    h1 {
+        margin-bottom: 1.2rem;
+        font-size: 2.2rem;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #306739;
+        padding: 10px 20px;
+        border-radius: 10px 10px 5px 5px;
+        max-width: 100%; /* Ensure navbar spans full width */
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Ensure it's above other content */
+    }
+    .logo {
+        color: #ffffffa2;
+        font-size: 24px;
+        font-weight: bold;
+        padding-right: 10px;
+        box-shadow: 2px 2px 10px rgba(46, 139, 7, 0.1);
+    }
+    .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-links li {
+        margin-left: 10px; /* Adjust spacing between nav items */
+    }
+    .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px; /* Increase touch target */
+    }
+    .MKB {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .MKB span {
+        height: 3px;
+        width: 25px;
+        background-color: #ffffffa2;
+        margin: 2px 0;
+        border-radius: 5px;
+        display: inline-block;
+        margin-left: 10px; /* Adjust hamburger icon position */
+    }
+    /* Responsive Media Queries */
+    @media (max-width: 1024px) {
+        /* Adjust styles for tablets and smaller desktop screens */
+        .container {
+            padding: 1rem;
+        }
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            background-color: #306739;
+            z-index: 999; /* Ensure it's above other content */
+            border-radius: 0 0 10px 10px; /* Rounded corners on dropdown */
+        }
+        .nav-links.active {
+            display: flex;
+        }
+    }
+    @media (max-width: 768px) {
+        /* Adjust styles for tablets and smaller screens */
+        .navbar {
+            padding: 10px; /* Adjust padding */
+        }
+        .nav-links li {
+            margin-left: 0; /* Remove left margin for nav items */
+            margin-top: 5px; /* Add top margin for better spacing */
+        }
+        .MKB {
+            display: flex; /* Display hamburger icon */
+        }
+    }
+    @media (max-width: 480px) {
+        /* Adjust styles for mobile phones */
+        .container {
+            padding: 0.5rem;
+        }
+        .nav-links a {
+            font-size: 16px; /* Decrease font size for smaller screens */
+        }
+        .MKB span {
+            margin-left: 5px; /* Adjust hamburger icon position */
+        }
+    }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        a {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #226d38;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #128222;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    padding-right: 15px;
+    box-shadow: 2px 2px 10px rgba(46, 139, 7, 0.1);
+
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.MKB {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.MKB span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #0f4205;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+        background-color: #587736;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+ 
+    }
+
+    .MKB {
+        display: flex;
+    }
+    .nav-links.active{
+    transition: opacity 2.15s linear;    
+    width:200px;
+    height:500px;
+    border-radius: 10px 10px 10px 10px;
+    top:50px;
+    opacity:0.4;
+    filter: blur(1px);
+
+}
+.nav-links:hover{
+    opacity:1;
+    filter: blur(0px)
+}
+
+
+}
+
+/* Toggle nav-links display */
+.nav-links.active {
+    display: flex;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MKB-cohort-1</div>
+            <ul class="nav-links" id="sidebar-wrapper">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="https://michaelkentburns.com/index.php/2024/05/07/a-big-celebration/">Services</a></li>
+                <li><a href="C:\Users\NICOLAS\Desktop\contactformtest\demo-survey-1.html.html">Contact</a></li>
+            </ul>
+            <div class="MKB">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <h1>Welcome to the Demo</h1>
+        <p>This is a brief introduction to the demo. Click the button below to start the demo.</p><br/>
+        <a href="Demo-survey/index.html">Start the Demo-survey</a>
+        <a href="Demo-JSON/jsonJavascipt.html">Visit the Demo-json</a><br/><br/>
+        <section id="pictures">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="C:\users\NICOLAS\Desktop\Form project\MKB-cohort-1-Demo\Demo-survey\Team Member's pictures\work-scaled.webp" alt="Image 1" width="150px" height="170px">
+                <img src="C:\Users\NICOLAS\Desktop\Form project\MKB-cohort-1-Demo\Demo-survey\Team Member's pictures\Efatha.webp" alt="Image 2" width="150px" height="170px">
+                <img src="C:\users\NICOLAS\Desktop\Form project\MKB-cohort-1-Demo\Demo-survey\Team Member's pictures\DestinAshuza.webp" alt="Image 3" width="150px" height="170px">
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+    </div>
+ 
+    <script>
+        const MKB = document.querySelector('.MKB');
+        const navLinks = document.querySelector('.nav-links');
+    
+        MKB.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+    </script> 
+</body>
+</html>
